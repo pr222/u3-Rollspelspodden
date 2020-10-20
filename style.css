@@ -62,15 +62,23 @@ main a:visited, footer a:visited {
     color: #0E35AF;
 }
 
-main section a {
+main section h1 a {
     text-decoration: none;
 }
 
-main section a:link, main section a:visited {
+main section h1 a:link, main section h1 a:visited {
     color: #0E35AF;
 }
 
-main section a:hover, main section a:active {
+main section h1 a:hover, main section h1 a:active {
+    color: #FF5050;
+}
+
+footer div ul a {
+    text-decoration: none;
+}
+
+footer div ul a:visited {
     color: #FF5050;
 }
 
@@ -117,12 +125,13 @@ main section a:hover, main section a:active {
 }
 
 #butik ul li {
-    padding: 18px;     
+    padding: 10px 20px;     
 }
 
 #butik:hover ul {
     display: block;
     position: absolute;
+    margin-left: -20px;
     background-color: #FF5050;
 }
 
@@ -135,6 +144,10 @@ main section a:hover, main section a:active {
 #butik ul ul li {
     margin-left: 15px;
     padding: 0px;
+}
+
+#butik ul ul li {
+    display: none;
 }
 
 #butik a {
@@ -212,7 +225,13 @@ main {
 }
 
 section {
-    margin-bottom: 50px;
+    padding-bottom: 50px;
+    margin-top: 30px;
+    border-bottom: dotted #FF5050;
+}
+
+main section p+p {
+    clear: both;
 }
 
 footer {
@@ -241,9 +260,7 @@ footer div ul {
     list-style: disc;
 }
 
-footer div ul a {
-    text-decoration: none;
-}
+
 
 
 /*  -------- Images   --------  */
