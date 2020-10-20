@@ -15,6 +15,7 @@ body {
     margin: 0 auto;
     /* max-width: 900px; */
     background-color: #F6EFEF;
+    height: 100%;
 }
 
 h1, h2, h3 {
