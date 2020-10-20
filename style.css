@@ -163,7 +163,7 @@ footer {
     font-size: 1.2rem;
     display: flex;
     flex-direction: row;
-    justify-content: end;
+    justify-content: flex-end;
 }
 
 .courtesy ul li {
