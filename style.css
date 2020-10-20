@@ -38,8 +38,7 @@ main a:link {
 }
 
 main a:hover, a:active {
-    color: #FFDD50;
-    text-decoration: #FF5050;
+    color: #1264B1;
 }
 
 main a:visited {
