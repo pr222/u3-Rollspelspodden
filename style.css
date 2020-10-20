@@ -61,7 +61,7 @@ main a:visited, footer a:visited {
 
 body {
     display: grid;
-    grid-template-columns: 90px auto 90px;
+    grid-template-columns: 200px auto 200px;
     grid-template-rows: min-content;
     grid-template-areas: 
     "header  header  header"
@@ -260,6 +260,11 @@ footer div ul a {
 
 footer div.footerImg {
     margin: 0 auto;
+}
+
+footer div.footerImg:hover {
+    background-color: #0e36af31;
+    border-radius: 100px;
 }
 
 img {
