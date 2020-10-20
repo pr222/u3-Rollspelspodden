@@ -234,6 +234,11 @@ main section p+p {
     clear: both;
 }
 
+#frontpage {
+    text-align: center;
+    font-size: 3rem;
+}
+
 footer {
     background-color: #FF5050;
     display: flex;
@@ -260,6 +265,9 @@ footer div ul {
     list-style: disc;
 }
 
+#box3 {
+    text-align: center;
+}
 
 
 
