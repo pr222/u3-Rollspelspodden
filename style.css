@@ -5,6 +5,8 @@
     padding: 0;
 }
 
+
+/* -------- Base styles -------- */
 html {
     font-size: 16px;
     color: #0E35AF;
@@ -47,7 +49,7 @@ nav a {
     text-decoration: none;
 }
 
-/* Links */
+/* -------- Links -------- */
 main a:link, footer a:link {
     color: #FF5050;
 }
@@ -60,43 +62,24 @@ main a:visited, footer a:visited {
     color: #0E35AF;
 }
 
-body {
-    display: grid;
-    grid-template-columns: 200px auto 200px;
-    grid-template-rows: min-content;
-    grid-template-areas: 
-    "header  header  header"
-    "nav     nav     nav"
-    "crumbs  crumbs  crumbs"
-    ".       main    ."
-    "footer  footer  footer";
+main section a {
+    text-decoration: none;
 }
 
-header {
-    grid-area: header;
+main section a:link, main section a:visited {
+    color: #0E35AF;
 }
 
-.mainNav {
-    grid-area: nav;
+main section a:hover, main section a:active {
+    color: #FF5050;
 }
 
-.breadcrumbs {
-    grid-area: crumbs;
-}
-
-main {
-    grid-area: main;
-}
-
-aside {
-    grid-area: aside;
-}
-
-footer {
-    grid-area: footer;
-}
+/* --------  All navigations --------  */
 
 /* Main navigation menu */
+.mainNav {
+    background-color: #FF5050;
+}
 .mainNav ul {
     font-size: 1.75rem;
     display: flex;
@@ -183,6 +166,9 @@ footer {
 }
 
 /* Breadcrumbs */
+.breadcrumbs {
+    background-color: #F4F5F6;
+}
 .breadcrumbs ul {
     display: flex;
     flex-direction: row; 
@@ -211,21 +197,21 @@ footer {
 .breadcrumbs li:last-of-type {
         font-weight: 600;
 }
+/*    END of Navigations    */
+
+
+/* --- Styles for different parts of the page  --- */
 
 header {
     background-color: #FFFF;
 }
 
-.mainNav {
-    background-color: #FF5050;
-}
-
-.breadcrumbs {
-    background-color: #F4F5F6;
-}
-
 main {
     margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+section {
     margin-bottom: 50px;
 }
 
@@ -259,15 +245,8 @@ footer div ul a {
     text-decoration: none;
 }
 
-footer div.footerImg {
-    margin: 0 auto;
-}
 
-footer div.footerImg:hover {
-    background-color: #0e36af31;
-    border-radius: 100px;
-}
-
+/*  -------- Images   --------  */
 img {
     max-width: 100%;
 }
@@ -286,3 +265,51 @@ img#itunes {
     width: 300px;
     height: 83px;
 }
+
+footer div.footerImg {
+    margin: 0 auto;
+}
+
+footer div.footerImg:hover {
+    background-color: #0e36af31;
+    border-radius: 100px;
+}
+
+
+/*   Grid layout    */ 
+body {
+    display: grid;
+    grid-template-columns: 200px auto 200px;
+    grid-template-rows: min-content;
+    grid-template-areas: 
+    "header  header  header"
+    "nav     nav     nav"
+    "crumbs  crumbs  crumbs"
+    ".       main    ."
+    "footer  footer  footer";
+}
+
+header {
+    grid-area: header;
+}
+
+.mainNav {
+    grid-area: nav;
+}
+
+.breadcrumbs {
+    grid-area: crumbs;
+}
+
+main {
+    grid-area: main;
+}
+
+aside {
+    grid-area: aside;
+}
+
+footer {
+    grid-area: footer;
+}
+/*    END of grid layout    */
