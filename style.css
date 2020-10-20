@@ -33,6 +33,17 @@ p {
     margin: 15px 2px;
 }
 
+/*  Remove liststyle from all lists */
+ul {
+    list-style: none;
+}
+
+/* Remove textdecoration from all navigation links */ 
+nav a {
+    text-decoration: none;
+}
+
+/* Links */
 main a:link {
     color: #FF5050;
 }
@@ -45,14 +56,110 @@ main a:visited {
     color: #0E35AF;
 }
 
-/*  Remove liststyle from all lists */
-ul {
-    list-style: none;
+/* Main nav links*/
+.mainNav ul {
+    font-size: 1.75rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-/* Remove textdecoration from all navigation links */ 
-a {
-    text-decoration: none;
+.mainNav li {
+    padding: 5px 50px;
+}
+
+.mainNav a:link, .mainNav a:visited {
+    color: #FFFF;
+}
+
+.mainNav a:hover, a:active {
+    color: #FFDD57
+}
+
+#avsnitt ul {
+    display: none;
+    position: absolute;
+    background-color: #FF5050;
+    margin-left: -70px;
+}
+
+#avsnitt:hover ul {
+    display: block;
+}
+
+#butik ul {
+    display: none;
+}
+
+#butik:hover ul {
+    display: block;
+    position: absolute;
+    background-color: #FF5050;
+}
+
+#butik:hover ul ul {
+    font-size: 0.75em;
+    display: block;
+    position: relative;
+}
+
+/* courtesy nav links */
+.courtesy ul {
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.courtesy ul li {
+    padding: 10px 10px;  
+}
+
+.courtesy a:link, .courtesy a:visited {
+    color: #0E35AF
+}
+
+.courtesy a:hover, .courtesy a:active {
+    color: #1264B1
+}
+
+.courtesy li:hover {
+    background-color: #1264b13a;
+}
+
+/* breadcrumbs */
+.breadcrumbs ul {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.breadcrumbs ul li {
+    padding: 5px 5px 5px 5px;    
+}
+
+.breadcrumbs a:link, .breadcrumbs a:visited {
+    color: #FF5050
+}
+
+.breadcrumbs a:hover, .breadcrumbs a:active {
+    color: #1264B1
+}
+
+.breadcrumbs li:nth-of-type(1)::after {
+    content: "->";
+    color: #FF5050;
+}
+
+.breadcrumbs li:nth-of-type(2)::after {
+    content: " -> ";
+    color: #FF5050;
+}
+
+.breadcrumbs li:last-of-type {
+        font-weight: 600;
 }
 
 header {
