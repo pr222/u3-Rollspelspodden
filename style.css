@@ -11,10 +11,14 @@ html {
 
 body {
     font-family: 'Chakra Petch', sans-serif;
+    margin: 0 auto;
+    max-width: 900px;
+    background-color: #F6EFEF;
 }
 
-h1, h2, h3, h4 {
-    font-family: 'Rokkitt', serif;    
+h1, h2, h3 {
+    font-family: 'Rokkitt', serif; 
+    margin-top: 10px;
 }
 
 h1 {
@@ -23,4 +27,55 @@ h1 {
 
 h2 {
     font-size: 2rem;
+}
+
+p {
+    margin: 15px 2px;
+}
+
+main a:link {
+    color: #FF5050;
+}
+
+main a:hover, a:active {
+    color: #FFDD50;
+    text-decoration: #FF5050;
+}
+
+main a:visited {
+    color: #0E35AF;
+}
+
+/*  Remove liststyle from all lists */
+ul {
+    list-style: none;
+}
+
+/* Remove textdecoration from all navigation links */ 
+a {
+    text-decoration: none;
+}
+
+header {
+    background-color: #FFFF;
+}
+
+.mainNav {
+    background-color: #FF5050;
+}
+
+.breadcrumbs {
+    background-color: #F4F5F6;
+}
+
+img {
+    max-width: 100%;
+}
+
+footer {
+    background-color: #FF5050;
+}
+
+footer div {
+    background-color: #F6EFEF;
 }
