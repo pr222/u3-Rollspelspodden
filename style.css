@@ -7,12 +7,13 @@
 
 html {
     font-size: 16px;
+    color: #0E35AF;
 }
 
 body {
     font-family: 'Chakra Petch', sans-serif;
     margin: 0 auto;
-    max-width: 900px;
+    /* max-width: 900px; */
     background-color: #F6EFEF;
 }
 
@@ -46,28 +47,28 @@ nav a {
 }
 
 /* Links */
-main a:link {
+main a:link, footer a:link {
     color: #FF5050;
 }
 
-main a:hover, a:active {
+main a:hover, main a:active, footer a:hover, footer a:active {
     color: #1264B1;
 }
 
-main a:visited {
+main a:visited, footer a:visited {
     color: #0E35AF;
 }
-/*
+
 body {
     display: grid;
-    grid-template-columns: 50px auto 40% 50px;
+    grid-template-columns: 90px auto 90px;
     grid-template-rows: min-content;
     grid-template-areas: 
-    "header  header  header  header"
-    "nav     nav     nav     nav"
-    "crumbs  crumbs  crumbs  crumbs"
-    ".       main    aside   ."
-    "footer  footer  footer  footer";
+    "header  header  header"
+    "nav     nav     nav"
+    "crumbs  crumbs  crumbs"
+    ".       main    ."
+    "footer  footer  footer";
 }
 
 header {
@@ -93,7 +94,6 @@ aside {
 footer {
     grid-area: footer;
 }
-*/
 
 /* Main navigation menu */
 .mainNav ul {
@@ -146,7 +146,6 @@ footer {
     font-size: 0.75em;
     display: block;
     position: relative; 
-  
 }
 
 #butik ul ul li {
@@ -228,13 +227,6 @@ main {
     margin-top: 20px;
     margin-bottom: 50px;
 }
-/*
-aside {
-    margin-top: 40px;
-    margin-left: 20px;
-}
-*/
-
 
 footer {
     background-color: #FF5050;
@@ -242,18 +234,49 @@ footer {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    padding-bottom: 50px;
 }
 
 footer div {
     background-color: #F6EFEF;
     width: 25%;
+    padding: 20px;
+    font-size: 1.2rem;
+}
+
+footer div h3 {
     text-align: center;
+    margin-bottom: 15px;
+}
+
+footer div ul {
+    margin-left: 40px;
+    list-style: disc;
+}
+
+footer div ul a {
+    text-decoration: none;
+}
+
+footer div.footerImg {
+    margin: 0 auto;
 }
 
 img {
     max-width: 100%;
 }
 
+#headerImg {
+    text-align: center;
+}
+
 section img {
     float: right;
+    margin: 15px;
+}
+
+img#itunes {
+    border-radius: 13px;
+    width: 300px;
+    height: 83px;
 }
