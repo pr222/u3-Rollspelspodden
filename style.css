@@ -49,6 +49,7 @@ nav a {
     text-decoration: none;
 }
 
+
 /* -------- Links -------- */
 main a:link, footer a:link {
     color: #FF5050;
@@ -82,8 +83,8 @@ footer div ul a:visited {
     color: #FF5050;
 }
 
-/* --------  All navigations --------  */
 
+/* --------  All navigations --------  */
 /* Main navigation menu */
 .mainNav {
     background-color: #FF5050;
@@ -183,10 +184,10 @@ footer div ul a:visited {
 }
 
 /* Breadcrumbs */
-.breadcrumbs {
+.breadcrumbs, .productMenu {
     background-color: #F4F5F6;
 }
-.breadcrumbs ul {
+.breadcrumbs ul, .productMenu ul {
     display: flex;
     flex-direction: row; 
     flex-wrap: wrap;
@@ -197,11 +198,11 @@ footer div ul a:visited {
     padding: 5px 0px 5px 0px;    
 }
 
-.breadcrumbs a:link, .breadcrumbs a:visited {
+.breadcrumbs a:link, .breadcrumbs a:visited, .productMenu a:link, .productMenu a:visited {
     color: #FF5050
 }
 
-.breadcrumbs a:hover, .breadcrumbs a:active {
+.breadcrumbs a:hover, .breadcrumbs a:active, .productMenu a:hover, .productMenu a:active {
     color: #1264B1
 }
 
@@ -214,6 +215,15 @@ footer div ul a:visited {
 .breadcrumbs li:last-of-type {
         font-weight: 600;
 }
+
+.productMenu {
+    font-size: 1.2rem;
+}
+
+.productMenu ul li {
+    margin: 5px;
+}
+
 /*    END of Navigations    */
 
 
@@ -253,7 +263,6 @@ fieldset {
     flex-direction: column; 
     margin-bottom: 15px;   
 }
-
 
 button, input, textarea {
     font-family: inherit;
@@ -299,7 +308,6 @@ footer div ul {
 }
 
 
-
 /*  -------- Images   --------  */
 img {
     max-width: 100%;
@@ -333,7 +341,6 @@ footer div.footerImg:hover {
     border-radius: 100px;
 }
 
-
 /*   Grid layout    */ 
 body {
     display: grid;
@@ -359,6 +366,10 @@ header {
     grid-area: crumbs;
 }
 
+.productMenu {
+    grid-area: crumbs;
+}
+
 main {
     grid-area: main;
 }
@@ -373,7 +384,24 @@ footer {
 /*    END of grid layout    */
 
 
-/* Media queries */
+/* ------   Media queries ----- */
+@media screen and (max-width: 730px) {
+    footer div {
+        flex-direction: column;
+        width: 100%;
+    }
+    footer div.footerImg {
+        width: 20%;
+    }
+
+    body {
+        display: block;
+    }
+
+    main {
+        margin: 10px;
+    }
+}
 
 @media screen and (max-width: 400px) {
 
@@ -391,10 +419,6 @@ footer {
 
     .mainNav {
         display: none;
-    }
-
-    body {
-        display: block;
     }
 
     #mobNav {
@@ -445,24 +469,12 @@ footer {
         color: #FF5050;
     }
 
-    main {
-        margin: 10px;
-    }
-
     #name, #email, #message {
         width: 100%;  
     }
 
     footer {
         margin-bottom: 90px;
-    }
-
-    footer div {
-        flex-direction: column;
-        width: 100%;
-    }
-    footer div.footerImg {
-        width: 20%;
     }
 
     h1 {
