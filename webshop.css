@@ -1,5 +1,55 @@
 @charset "UTF-8";
 
+body {
+    display: block;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+/* Grid temp for webshop in main-area of page */
+.wrapper {
+    display: grid;
+    grid-template-columns: min-content auto;
+    grid-template-areas: 
+    "nav  content";
+}
+
+.productMenu {
+    grid-area: nav;
+}
+
+#webshop {
+    grid-area: content;
+}
+
+/*  Webshop local navigation */
+.productMenu {
+    background-color: #F4F5F6;
+}
+
+.productMenu ul {
+    display: block;
+}
+
+.productMenu a:link, .productMenu a:visited {
+    color: #FF5050;
+}
+
+.productMenu a:hover, .productMenu a:active {
+    color: #1264B1;
+}
+
+.productMenu {
+    font-size: 1.75rem;
+    padding: 15px;
+}
+
+/*  Presentation on main webshop page */
+
 .product img {
     height: 200px;
 }
@@ -15,18 +65,22 @@
 
 #webshop {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
     align-content: space-between;
+    justify-content: center;
     margin:0;
 }
 
+/*  Style for single product pages */
+.productPage {
+    display: flex;
+    flex-direction: row;
+    margin: 50px;
+} 
 
-#productImg img {
-    height: 300px;
-    float: left;
-    margin-right: 20px;
+.productImg img {
+    max-height: 300px;
 }
-
 
 #addToCart {
     background-color: #FF5050;
@@ -35,10 +89,19 @@
     padding: 10px 50px;
 }
 
-#addToCart a:link, #addToCart a:visited {
+.description {
+    padding-left: 20px;
+}
+
+.description a {
+    text-decoration: none;
+}
+
+.description a:link, .description a:visited {
     color: #FFFFFF;
 }
 
-#addToCart a:hover, #addToCart a:active {
+.description a:hover, .description a:active {
     color: #FFDD57;
+
 }

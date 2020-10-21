@@ -187,7 +187,7 @@ footer div ul a:visited {
 .breadcrumbs, .productMenu {
     background-color: #F4F5F6;
 }
-.breadcrumbs ul, .productMenu ul {
+.breadcrumbs ul {
     display: flex;
     flex-direction: row; 
     flex-wrap: wrap;
@@ -198,11 +198,11 @@ footer div ul a:visited {
     padding: 5px 0px 5px 0px;    
 }
 
-.breadcrumbs a:link, .breadcrumbs a:visited, .productMenu a:link, .productMenu a:visited {
+.breadcrumbs a:link, .breadcrumbs a:visited {
     color: #FF5050
 }
 
-.breadcrumbs a:hover, .breadcrumbs a:active, .productMenu a:hover, .productMenu a:active {
+.breadcrumbs a:hover, .breadcrumbs a:active {
     color: #1264B1
 }
 
@@ -214,14 +214,6 @@ footer div ul a:visited {
 
 .breadcrumbs li:last-of-type {
         font-weight: 600;
-}
-
-.productMenu {
-    font-size: 1.2rem;
-}
-
-.productMenu ul li {
-    margin: 5px;
 }
 
 /*    END of Navigations    */
@@ -372,10 +364,6 @@ header {
 
 main {
     grid-area: main;
-}
-
-aside {
-    grid-area: aside;
 }
 
 footer {
