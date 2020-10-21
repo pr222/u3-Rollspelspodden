@@ -400,7 +400,7 @@ footer {
     #mobNav {
         background-color: #FF5050;
         color: #ffffff;
-        display: inline-block;
+        display: block;
         position: fixed;
         bottom: 0;
         left: 0;
@@ -408,7 +408,6 @@ footer {
         height: 100px;
         overflow-x: auto;
     }
-
 
     #mobNav ul {
         display: flex;
@@ -428,36 +427,23 @@ footer {
         text-align: center;
     }
 
-    #avsnittButton {
-        background-image: url(/img/mob_white_mic.png);
+    #avsnittMeny, #butikMeny {
+        background-color: #FF5050;
+        color: #ffffff;
         display: block;
-        width: 60px;
-        height: 60px;
+        position: fixed;
+        padding-top: 5px;
+        font-size: 1.2rem;
+        bottom: 100;
+        left: 0;
+        width: 100%;
+        height: 36px;
+        overflow-x: auto;
     }
 
-    #avsnittButton input {
-        display: none;  
+    .thisPage{
+        color: #FFDD57;
     }
-
-    #avsnittButton input:checked {
-        display: block;
-    }
-
-    #butikButton {
-        background-image: url(/img/mob_white_mic.png);
-        display: block;
-        width: 60px;
-        height: 60px;
-    }
-
-    #butikButton input {
-        display: none;  
-    }
-
-    #butikButton input:checked {
-        display: block;
-    }
-
 
 
     main {
