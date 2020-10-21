@@ -428,7 +428,7 @@ footer {
     }
 
     #avsnittMeny, #butikMeny {
-        background-color: #FF5050;
+        background-color: #F4F5F6;
         color: #ffffff;
         display: block;
         position: fixed;
@@ -441,10 +441,9 @@ footer {
         overflow-x: auto;
     }
 
-    .thisPage{
-        color: #FFDD57;
+    #butikMeny a:link, #butikMeny a:visited, #avsnittMeny a:link, #avsnittMeny a:visited {
+        color: #FF5050;
     }
-
 
     main {
         margin: 10px;
@@ -464,5 +463,23 @@ footer {
     }
     footer div.footerImg {
         width: 20%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    section img {
+        float: none;
+        margin: auto;
+    }
+
+    #frontpage {
+        text-align: center;
+        font-size: 2rem;
     }
 }
