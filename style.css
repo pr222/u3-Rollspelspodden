@@ -183,7 +183,7 @@ footer div ul a:visited {
     background-color: #1264b13a;
 }
 
-/* Breadcrumbs */
+/* Local menus  */
 .breadcrumbs, .productMenu {
     background-color: #F4F5F6;
 }
@@ -194,15 +194,19 @@ footer div ul a:visited {
     justify-content: center;
 }
 
+.productMenu ul {
+    display: block;
+}
+
 .breadcrumbs ul li {
     padding: 5px 0px 5px 0px;    
 }
 
-.breadcrumbs a:link, .breadcrumbs a:visited {
+.breadcrumbs a:link, .breadcrumbs a:visited, .productMenu a:link, .productMenu a:visited {
     color: #FF5050
 }
 
-.breadcrumbs a:hover, .breadcrumbs a:active {
+.breadcrumbs a:hover, .breadcrumbs a:active, .productMenu a:hover, .productMenu a:active {
     color: #1264B1
 }
 
@@ -214,6 +218,11 @@ footer div ul a:visited {
 
 .breadcrumbs li:last-of-type {
         font-weight: 600;
+}
+
+.productMenu {
+    font-size: 1.75rem;
+    padding: 15px;
 }
 
 /*    END of Navigations    */
@@ -336,7 +345,7 @@ footer div.footerImg:hover {
 /*   Grid layout    */ 
 body {
     display: grid;
-    grid-template-columns: 200px auto 200px;
+    grid-template-columns: 150px auto 150px;
     grid-template-rows: min-content;
     grid-template-areas: 
     "header  header  header"
