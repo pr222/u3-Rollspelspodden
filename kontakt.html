@@ -17,8 +17,11 @@
         </nav>   
         <div id="headerImg">
             <a href="index.html">
-                <img src="img/desktop-header.png" alt="Rollspelspodden header-logga">
+                <img src="img/desktop-header.png" alt="Avlång Rollspelspodden header-logga">
             </a>
+        </div>
+        <div id="mob-logga">
+            <img src="img/mobile-header.png" alt="Kvadratisk Rollspelspodden header-logga">
         </div>
     </header>
 
@@ -55,6 +58,38 @@
         </ul>
     </nav>   
 
+    <nav id="mobNav">
+        <ul>
+            <li>
+                <div id="avsnittButton">
+                    <label for="avnsnittCheck" id="avsnittIcon"><img src="img/mob_white_mic.png" alt="mikrofon-ikon"></label>
+                    <input type="checkbox" id="avnsnittCheck">
+                avsnitt
+                    <ul id="avsnittDrop">
+                        <li>Alla Avsnitt</li>
+                        <li>Diskussionsavsnitt</li>
+                        <li>Recensioner</li>
+                    </ul>
+                    </div>
+            </li>
+            <li>
+                <div id="butikButton"><label for="butikCheck" id="butikIcon"><img src="img/mob_white_cart.png" alt="kundvagn-ikon"></label>
+                    <input type="checkbox" id="butikCheck">
+                    butik
+                    <ul id="butikDrop">
+                        <li>Alla produkter</li>
+                        <li>Muggar</li>
+                        <li>Tröjor</li>
+                        <li>Övrigt</li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="about.html"><img src="img/mob_white_die.png"></a> om oss</li>
+            <li><a href="kontakt.html"><img src="img/mob_white_at.png"></a> kontakt</li>
+        </ul>
+
+    </nav>
+
     <main>
         <section>
             <h1>Kontakta oss</h1>
@@ -65,22 +100,23 @@
                 <li>Facebook: <a href="https://www.facebook.com/Rollspelspodden" target="_blank">Rollspelspodden</a></li>
                 <li>Instagram: <a href="https://www.instagram.com/rollspelspodden/" target="_blank">@Rollspelspodden</a></li>
             </ul>
+
             <form method="POST" data-netlify="true" id="contactForm">
                 <fieldset id="form">
-                    <legend>Formulär</legend>
+                    <legend><h2>Formulär</h2></legend>
 
-                    <label>
-                        Ditt namn: <input type="textarea" required> *
+                    <label for="name">
+                        Ditt namn: *<input type="text" name="name" id="name" required>
                     </label>                    
 
 
-                    <label>
-                        Din e-post: <input type="email" required> *
+                    <label for="email">
+                        Din e-post: *<input type="email" name="email" id="email" required>
                     </label>                    
 
 
-                    <label>
-                        Meddelande: <input type="textarea" required> *
+                    <label for="message">
+                        Meddelande: *<textarea name="message" id="message" rows="7" cols="40" required></textarea>
                     </label>                    
 
                     <div id="send">

@@ -108,6 +108,10 @@ footer div ul a:visited {
     color: #FFDD57
 }
 
+#mobNav {
+    display: none;
+}
+
 #avsnitt ul {
     display: none;
     position: absolute;
@@ -239,13 +243,38 @@ main section p+p {
     font-size: 3rem;
 }
 
+fieldset {
+    border-style: none;
+    margin-top: 30px;
+}
+
+#name, #email, #message {
+    display: flex;
+    flex-direction: column; 
+    margin-bottom: 15px;   
+}
+
+
+button, input, textarea {
+    font-family: inherit;
+    font-size: 100%;
+}
+
+textarea {
+    width: 50%
+}
+
+#send {
+    margin-top: 15px;
+}
+
 footer {
     background-color: #FF5050;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding-bottom: 50px;
+    padding-bottom: 40px;
 }
 
 footer div {
@@ -278,6 +307,10 @@ img {
 
 #headerImg {
     text-align: center;
+}
+
+#mob-logga {
+    display: none;
 }
 
 section img {
@@ -338,3 +371,112 @@ footer {
     grid-area: footer;
 }
 /*    END of grid layout    */
+
+
+/* Media queries */
+
+@media screen and (max-width: 400px) {
+
+    #mob-logga {
+        display: block;
+    }
+
+    #headerImg {
+        display: none;
+    }
+
+    .courtesy {
+        display: none;
+    }
+
+    .mainNav {
+        display: none;
+    }
+
+    body {
+        display: block;
+    }
+
+    #mobNav {
+        background-color: #FF5050;
+        color: #ffffff;
+        display: inline-block;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        overflow-x: auto;
+    }
+
+
+    #mobNav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;      
+        position: relative;
+    }
+
+    #mobNav ul ul {
+        display: none;
+    }
+
+    #mobNav ul li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #avsnittButton {
+        background-image: url(/img/mob_white_mic.png);
+        display: block;
+        width: 60px;
+        height: 60px;
+    }
+
+    #avsnittButton input {
+        display: none;  
+    }
+
+    #avsnittButton input:checked {
+        display: block;
+    }
+
+    #butikButton {
+        background-image: url(/img/mob_white_mic.png);
+        display: block;
+        width: 60px;
+        height: 60px;
+    }
+
+    #butikButton input {
+        display: none;  
+    }
+
+    #butikButton input:checked {
+        display: block;
+    }
+
+
+
+    main {
+        margin: 10px;
+    }
+
+    #name, #email, #message {
+        width: 100%;  
+    }
+
+    footer {
+        margin-bottom: 90px;
+    }
+
+    footer div {
+        flex-direction: column;
+        width: 100%;
+    }
+    footer div.footerImg {
+        width: 20%;
+    }
+}
