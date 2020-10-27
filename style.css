@@ -15,8 +15,8 @@ html {
 body {
     font-family: 'Chakra Petch', sans-serif;
     margin: 0 auto;
-    /* max-width: 900px; */
-    background-color: #F6EFEF;
+    /* max-width: 1000px; */
+    background-color: #FF5050;
     height: 100%;
 }
 
@@ -41,16 +41,18 @@ p {
     margin: 15px 2px;
 }
 
+
+/* --------  Links (except nagivation links) -------- */
 ul {
     list-style: none;
 }
 
-nav a {
+nav a, main section h1 a, footer div ul a  {
     text-decoration: none;
 }
 
 
-/* -------- Links -------- */
+/* Regular links in text */
 main a:link, footer a:link {
     color: #FF5050;
 }
@@ -63,10 +65,8 @@ main a:visited, footer a:visited {
     color: #0E35AF;
 }
 
-main section h1 a {
-    text-decoration: none;
-}
 
+/* Header-links for the podcast pages */
 main section h1 a:link, main section h1 a:visited {
     color: #0E35AF;
 }
@@ -75,16 +75,14 @@ main section h1 a:hover, main section h1 a:active {
     color: #FF5050;
 }
 
-footer div ul a {
-    text-decoration: none;
-}
-
+/* Footer link does not change color when visited */
 footer div ul a:visited {
     color: #FF5050;
 }
+/* -------- -------- End of links -------- -------- */
 
 
-/* --------  All navigations --------  */
+/* -------- ----- All navigations ----- --------  */
 /* Main navigation menu */
 .mainNav {
     background-color: #FF5050;
@@ -113,50 +111,24 @@ footer div ul a:visited {
     display: none;
 }
 
+
+/* Main drop-down menu */
+#avsnitt ul, #butik ul {
+    display: none;
+    position: absolute;
+    background-color: #FF5050;
+}
+
 #avsnitt ul {
-    display: none;
-    position: absolute;
-    background-color: #FF5050;
-    margin-left: -70px;
+    margin-left: -70px;    
 }
 
-#avsnitt:hover ul {
-    display: block;
-}
-
-/* Butik - menu */
 #butik ul {
-    display: none;
+    margin-left: -50px;   
 }
 
-#butik ul li {
-    padding: 10px 20px;     
-}
-
-#butik:hover ul {
+#avsnitt:hover ul, #butik:hover ul {
     display: block;
-    position: absolute;
-    margin-left: -20px;
-    background-color: #FF5050;
-}
-
-#butik:hover ul ul {
-    font-size: 0.75em;
-    display: block;
-    position: relative; 
-}
-
-#butik ul ul li {
-    margin-left: 15px;
-    padding: 0px;
-}
-
-#butik ul ul li {
-    display: none;
-}
-
-#butik a {
-    display: block;    
 }
 
 /* Courtesy nav links */
@@ -237,6 +209,8 @@ header {
 main {
     margin-top: 20px;
     margin-bottom: 50px;
+    padding: 0px 10px;
+    background-color: #F6EFEF;
 }
 
 section {
@@ -333,7 +307,7 @@ img#itunes {
     height: 83px;
 }
 
-footer div.footerImg {
+footer div.footerImg, section picture img{
     margin: 0 auto;
 }
 
@@ -345,7 +319,7 @@ footer div.footerImg:hover {
 /*   Grid layout    */ 
 body {
     display: grid;
-    grid-template-columns: 150px auto 150px;
+    grid-template-columns: 50px auto 50px;
     grid-template-rows: min-content;
     grid-template-areas: 
     "header  header  header"
