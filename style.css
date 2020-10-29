@@ -16,7 +16,7 @@ body {
     font-family: 'Chakra Petch', sans-serif;
     margin: 0 auto;
     /* max-width: 1000px; */
-    background-color: #FF5050;
+    background-color: #F6EFEF;
     height: 100%;
 }
 
@@ -52,33 +52,60 @@ nav a, main section h1 a, footer div ul a  {
 }
 
 
-/* Regular links in text */
-main a:link, footer a:link {
+/* Links  */
+a:link {
     color: #FF5050;
 }
 
-main a:hover, main a:active, footer a:hover, footer a:active {
+a:hover, a:active {
     color: #1264B1;
 }
 
-main a:visited, footer a:visited {
+a:visited {
     color: #0E35AF;
 }
 
 
-/* Header-links for the podcast pages */
-main section h1 a:link, main section h1 a:visited {
+/* Headers in main section and courtesy nav */
+h1 a:link,  h1 a:visited, .courtesy a:link, .courtesy a:visited {
     color: #0E35AF;
 }
 
-main section h1 a:hover, main section h1 a:active {
+h1 a:hover, h1 a:active {
     color: #FF5050;
 }
 
-/* Footer link does not change color when visited */
+.courtesy a:hover, .courtesy a:active {
+    color: #1264B1;
+}
+
+/* Local navigations */
+.breadcrumbs a:visited, .productMenu a:visited {
+    color: #FF5050
+}
+
+.breadcrumbs a:hover, .breadcrumbs a:active, .productMenu a:hover, .productMenu a:active {
+    color: #1264B1;
+}
+
+/* Main navigation links */
+.mainNav a:link, .mainNav a:visited {
+    color: #FFFFFF;
+}
+
+.mainNav a:hover, a:active {
+    color: #FFDD57;
+}
+
+/* Footer links */
 footer div ul a:visited {
     color: #FF5050;
 }
+
+footer div ul a:active, footer div ul a:hover{
+    color: #1264B1;
+}
+
 /* -------- -------- End of links -------- -------- */
 
 
@@ -99,18 +126,9 @@ footer div ul a:visited {
     padding: 5px 50px;
 }
 
-.mainNav a:link, .mainNav a:visited {
-    color: #FFFF;
-}
-
-.mainNav a:hover, a:active {
-    color: #FFDD57
-}
-
 #mobNav {
     display: none;
 }
-
 
 /* Main drop-down menu */
 #avsnitt ul, #butik ul {
@@ -131,7 +149,7 @@ footer div ul a:visited {
     display: block;
 }
 
-/* Courtesy nav links */
+/* Courtesy navigation */
 .courtesy ul {
     font-size: 1.2rem;
     display: flex;
@@ -141,21 +159,14 @@ footer div ul a:visited {
 
 .courtesy ul li {
     padding: 10px 10px;  
-}
-
-.courtesy a:link, .courtesy a:visited {
-    color: #0E35AF
-}
-
-.courtesy a:hover, .courtesy a:active {
-    color: #1264B1
+    border-bottom: 2px solid #FF5050;
 }
 
 .courtesy li:hover {
     background-color: #1264b13a;
 }
 
-/* Local menus  */
+/* Local navigations */
 .breadcrumbs, .productMenu {
     background-color: #F4F5F6;
 }
@@ -166,20 +177,8 @@ footer div ul a:visited {
     justify-content: center;
 }
 
-.productMenu ul {
-    display: block;
-}
-
 .breadcrumbs ul li {
     padding: 5px 0px 5px 0px;    
-}
-
-.breadcrumbs a:link, .breadcrumbs a:visited, .productMenu a:link, .productMenu a:visited {
-    color: #FF5050
-}
-
-.breadcrumbs a:hover, .breadcrumbs a:active, .productMenu a:hover, .productMenu a:active {
-    color: #1264B1
 }
 
 .breadcrumbs li+li:before {
@@ -192,11 +191,14 @@ footer div ul a:visited {
         font-weight: 600;
 }
 
+.productMenu ul {
+    display: block;
+}
+
 .productMenu {
     font-size: 1.75rem;
     padding: 15px;
 }
-
 /*    END of Navigations    */
 
 
@@ -228,6 +230,7 @@ main section p+p {
     font-size: 3rem;
 }
 
+/* Contact form */
 fieldset {
     border-style: none;
     margin-top: 30px;
@@ -266,6 +269,7 @@ footer div {
     width: 25%;
     padding: 20px;
     font-size: 1.2rem;
+    margin-top: 20px;
 }
 
 footer div h3 {
@@ -319,7 +323,7 @@ footer div.footerImg:hover {
 /*   Grid layout    */ 
 body {
     display: grid;
-    grid-template-columns: 50px auto 50px;
+    grid-template-columns: 150px auto 150px;
     grid-template-rows: min-content;
     grid-template-areas: 
     "header  header  header"
@@ -356,7 +360,24 @@ footer {
 
 
 /* ------   Media queries ----- */
-@media screen and (max-width: 730px) {
+@media screen and (max-width: 890px) {
+
+
+    body {
+        display: block;
+    }
+
+    header {
+        padding: 0px 20px;
+    }
+
+    main {
+        margin: 10px;
+    }
+    #frontpage {
+        font-size: 2.5rem;
+    }
+
     footer div {
         flex-direction: column;
         width: 100%;
@@ -364,31 +385,19 @@ footer {
     footer div.footerImg {
         width: 20%;
     }
-
-    body {
-        display: block;
-    }
-
-    main {
-        margin: 10px;
-    }
 }
 
 @media screen and (max-width: 400px) {
+
+    header {
+        padding: 0px;
+    }
 
     #mob-logga {
         display: block;
     }
 
-    #headerImg {
-        display: none;
-    }
-
-    .courtesy {
-        display: none;
-    }
-
-    .mainNav {
+    #headerImg, .courtesy, .mainNav {
         display: none;
     }
 
@@ -425,6 +434,7 @@ footer {
     #avsnittMeny, #butikMeny {
         background-color: #F4F5F6;
         color: #ffffff;
+        border-top: 2px solid #FF5050;
         display: block;
         position: fixed;
         padding-top: 5px;
@@ -462,7 +472,6 @@ footer {
     }
 
     #frontpage {
-        text-align: center;
         font-size: 2rem;
     }
 }
