@@ -51,7 +51,7 @@
 
 #addToCart {
     background-color: #FF5050;
-    display: border-box;
+    display: block;
     margin-left: 10px;
     padding: 10px 50px;
 }
