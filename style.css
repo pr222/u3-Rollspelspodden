@@ -230,6 +230,10 @@ main section p+p {
     font-size: 3rem;
 }
 
+#frontpage h1 {
+    display: none;
+}
+
 /* Contact form */
 fieldset {
     border-style: none;
